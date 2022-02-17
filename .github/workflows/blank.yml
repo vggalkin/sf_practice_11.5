@@ -10,5 +10,6 @@ jobs:
     steps:
       - name: Run sql script
         run: |
-          apt update && apt install mysql-client 
+          sudo apt update && sudo apt install -y mysql-client
+          sleep 20
           mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database Rfam < rfam.sql
