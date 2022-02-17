@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run sql script
-        run: mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database Rfam < ${{ github.workspace }}/rfam.sql
+        run: |
+          ls ${{ github.workspace }}
+          mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database Rfam < ${{ github.workspace }}/rfam.sql
