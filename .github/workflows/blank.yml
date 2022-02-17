@@ -8,6 +8,7 @@ jobs:
   sql:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - run: ls ${{ github.workspace }}
     - run: cat ../rfam.sql
           
