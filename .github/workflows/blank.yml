@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: ls ${{ github.workspace }}
-    - run: cat ${{ github.workspace }}/rfam.sql
+    - run: cat ../rfam.sql
           
